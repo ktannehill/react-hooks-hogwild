@@ -1,8 +1,16 @@
 import { useState } from "react";
 // import Details from "./Details";
 
-const Tile = ({ name, image, specialty, weight, greased, 
-    "highest medal achieved": medal}) => {
+const Tile = ({ 
+    name, 
+    image, 
+    specialty, 
+    weight, 
+    greased, 
+    "highest medal achieved": medal,
+    hidden,
+    toggleHidden
+}) => {
     const [showDetails, setShowDetails] = useState(false)
 
 	const handleToggleDetails = () => {
@@ -19,7 +27,8 @@ const Tile = ({ name, image, specialty, weight, greased,
                     <p>Weight: {weight}lbs</p>
                     <p>{greased ? "Greased" : "Not greased"}</p>
                     <p>Medal: {medal}</p>
-                </>}
+                </>
+            }
         </div>
     )
 }
